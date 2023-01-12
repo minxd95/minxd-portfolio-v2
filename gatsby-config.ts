@@ -32,6 +32,15 @@ const config: GatsbyConfig = {
       __key: "pages",
     },
     "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@": "./src",
+        },
+        extensions: ["ts", "tsx"],
+      },
+    },
   ],
 };
 
