@@ -17,9 +17,20 @@ module.exports = {
           from: { opacity: "0%" },
           to: { opacity: "100%" },
         },
+        "fade-up": {
+          from: {
+            opacity: "0%",
+            transform: "translate(0, 16px)",
+          },
+          to: {
+            opacity: "100%",
+            transform: "translate(0, 0)",
+          },
+        },
       },
       animation: {
-        "fade-in": "fade-in 1s ease",
+        "fade-in": "fade-in 1s ease backwards",
+        "fade-up": "fade-up 1s ease backwards",
       },
       backgroundImage: {
         me: "url('https://seom.in/assets/images/me.jpeg')",
