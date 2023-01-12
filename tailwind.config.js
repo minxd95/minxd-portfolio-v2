@@ -21,6 +21,9 @@ module.exports = {
       animation: {
         "fade-in": "fade-in 1s ease",
       },
+      backgroundImage: {
+        me: "url('https://seom.in/assets/images/me.jpeg')",
+      },
     },
   },
   plugins: [],
