@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 function Header() {
   return (
-    <header className="sticky top-0 bg-white">
+    <header className="sticky top-0 bg-white z-50">
       <nav className="h-[72px] px-4 flex justify-between items-center mx-auto max-w-screen-xl font-bold">
         <Link to="/">
           <div className="flex items-center gap-2">

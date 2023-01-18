@@ -29,8 +29,8 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in": "fade-in 1s ease backwards",
-        "fade-up": "fade-up 1s ease backwards",
+        subject: "fade-up 1.4s cubic-bezier(.25,1,.5,1) backwards",
+        content: "fade-in 1.8s 0.25s cubic-bezier(.25,1,.5,1) backwards",
       },
       backgroundImage: {
         me: "url('https://seom.in/assets/images/me.jpeg')",
