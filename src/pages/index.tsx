@@ -1,5 +1,6 @@
 import Content from "@/components/Content";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import Subject from "@/components/Subject";
 import { mdiCellphone, mdiEmail, mdiHome, mdiOpenInNew } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -97,8 +98,8 @@ const Skill = () => {
       <div className="flex-1">
         <span className="text-xl font-bold">Skill</span>
         <div className="mt-4 flex gap-2 flex-wrap">
-          {mainSkillList.map((skill) => (
-            <Capsule text={skill} />
+          {mainSkillList.map((skill, idx) => (
+            <Capsule key={idx} text={skill} />
           ))}
         </div>
       </div>
@@ -111,8 +112,11 @@ const List = ({ title, items }: { title: string; items: string[] }) => {
     <div className="flex-1">
       <span className="text-xl font-bold">{title}</span>
       <ul>
-        {items.map((item) => (
-          <li className="[&:not(:first-child)]:mt-4 [&:first-child]:mt-5">
+        {items.map((item, idx) => (
+          <li
+            key={idx}
+            className="[&:not(:first-child)]:mt-4 [&:first-child]:mt-5"
+          >
             {item}
           </li>
         ))}
@@ -129,6 +133,6 @@ const Capsule = ({ text }: { text: string }) => {
   );
 };
 
-export default IndexPage;
+export const Head = () => <Seo title="Introduce" />;
 
-export const Head = () => <title>Minseok Seo - Introduce</title>;
+export default IndexPage;

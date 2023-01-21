@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `웹개발자 서민석`,
+    title: `Minseok Seo`,
     siteUrl: `https://www.seom.in`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -30,6 +30,14 @@ const config: GatsbyConfig = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "works",
+        path: `${__dirname}/works`,
+      },
+      __key: "works",
     },
     "gatsby-plugin-postcss",
     {
