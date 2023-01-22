@@ -16,16 +16,18 @@ const WorkPage = ({ data }: PageProps<Queries.WorkPageQuery>) => {
     <Layout>
       <Subject>프로젝트</Subject>
       <Content>
-        {data.allMdx.nodes.map((work) => (
-          <Link to={`/works/${work.frontmatter?.slug}`}>
-            <Work
-              key={work.id}
-              title={work.frontmatter?.title}
-              image={work.frontmatter?.image as ImageDataLike}
-              imageAlt={work.frontmatter?.image_alt}
-            />
-          </Link>
-        ))}
+        <div className="flex flex-col gap-20">
+          {data.allMdx.nodes.map((work, idx) => (
+            <Link key={idx} to={`/works/${work.frontmatter?.slug}`}>
+              <Work
+                key={work.id}
+                title={work.frontmatter?.title}
+                image={work.frontmatter?.image as ImageDataLike}
+                imageAlt={work.frontmatter?.image_alt}
+              />
+            </Link>
+          ))}
+        </div>
       </Content>
     </Layout>
   );
@@ -43,14 +45,14 @@ const Work = ({
   if (!image || !imageAlt || !title) return <></>;
 
   return (
-    <div className="w-full h-[480px] drop-shadow-lg hover:drop-shadow-2xl transition bg-white rounded-xl flex flex-col justify-center items-center">
-      <div className="w-[500px]">
+    <div className="w-full drop-shadow-lg hover:drop-shadow-2xl transition bg-white rounded-xl flex flex-col justify-center items-center px-8 py-12">
+      <div className="max-w-[500px]">
         <GatsbyImage
           image={getImage(image) as IGatsbyImageData}
           alt={imageAlt}
         />
       </div>
-      <span className="text-2xl font-bold mt-8">{title}</span>
+      <span className="text-xl sm:text-2xl font-bold mt-8">{title}</span>
     </div>
   );
 };

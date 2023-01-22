@@ -27,12 +27,10 @@ const IndexPage = () => {
     <Layout>
       <Subject>
         <p>안녕하세요.</p>
-        <p className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-0">
+        <p className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-0">
           프론트엔드 개발자
-          <div className="flex items-center">
-            <span className="inline-block text-center w-36 h-16 leading-[4rem] text-5xl bg-primary text-white rounded-lg mx-4">
-              서민석
-            </span>
+          <div className="flex items-end">
+            <span className="text-5xl mx-4">서민석</span>
             <span>입니다.</span>
           </div>
         </p>

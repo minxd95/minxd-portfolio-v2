@@ -41,7 +41,7 @@ function Header() {
         </button>
         {isShowMenu && (
           <div
-            className={`z-40 flex sm:hidden absolute right-0 top-[72px] w-32 flex-col shadow-xl ${
+            className={`rounded-b-lg bg-white z-40 flex sm:hidden absolute right-0 top-[72px] w-32 flex-col ${
               !isMenuSlideOut ? "animate-menu-in" : "animate-menu-out"
             }`}
           >
