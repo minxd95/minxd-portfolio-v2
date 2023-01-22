@@ -15,7 +15,7 @@ function Header() {
             <span>MINSEOK SEO</span>
           </div>
         </Link>
-        <div className="flex gap-7">
+        <div className="hidden sm:flex gap-7">
           <Link to="/">INTRODUCE</Link>
           <Link to="/works">WORKS</Link>
           <Link to="/contact">CONTACT</Link>

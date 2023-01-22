@@ -27,18 +27,22 @@ const IndexPage = () => {
     <Layout>
       <Subject>
         <p>안녕하세요.</p>
-        <p>
+        <p className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-0">
           프론트엔드 개발자
-          <span className="inline-block text-center w-36 h-16 leading-[4rem] text-5xl bg-primary text-white rounded-lg mx-4">
-            서민석
-          </span>
-          입니다.
+          <div className="flex items-center">
+            <span className="inline-block text-center w-36 h-16 leading-[4rem] text-5xl bg-primary text-white rounded-lg mx-4">
+              서민석
+            </span>
+            <span>입니다.</span>
+          </div>
         </p>
       </Subject>
       <Content>
-        <Profile />
-        <Career />
-        <Skill />
+        <div className="flex flex-col gap-20">
+          <Profile />
+          <Career />
+          <Skill />
+        </div>
       </Content>
     </Layout>
   );
@@ -85,7 +89,7 @@ const Profile = () => {
 
 const Career = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-20 sm:gap-0">
       <List title="Education" items={educationList} />
       <List title="Career" items={careerList} />
     </div>
@@ -94,14 +98,12 @@ const Career = () => {
 
 const Skill = () => {
   return (
-    <div className="flex">
-      <div className="flex-1">
-        <span className="text-xl font-bold">Skill</span>
-        <div className="mt-4 flex gap-2 flex-wrap">
-          {mainSkillList.map((skill, idx) => (
-            <Capsule key={idx} text={skill} />
-          ))}
-        </div>
+    <div>
+      <span className="text-xl font-bold">Skill</span>
+      <div className="mt-4 flex gap-2 flex-wrap">
+        {mainSkillList.map((skill, idx) => (
+          <Capsule key={idx} text={skill} />
+        ))}
       </div>
     </div>
   );
