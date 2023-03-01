@@ -50,7 +50,7 @@ const Profile = () => {
   return (
     <div>
       <span className="text-xl font-bold">Profile</span>
-      <ul>
+      <ul className="list-none">
         <li className="[&:not(:first-child)]:mt-4 [&:first-child]:mt-5">
           <div className="flex gap-2">
             <Icon path={mdiCellphone} size="16px" />
@@ -111,7 +111,7 @@ const List = ({ title, items }: { title: string; items: string[] }) => {
   return (
     <div className="flex-1">
       <span className="text-xl font-bold">{title}</span>
-      <ul>
+      <ul className="list-none">
         {items.map((item, idx) => (
           <li
             key={idx}

@@ -12,6 +12,7 @@ import {
   ImageDataLike,
 } from "gatsby-plugin-image";
 import * as React from "react";
+import "github-markdown-css";
 
 const WorkDetailPage = ({
   data,
@@ -37,7 +38,7 @@ const WorkDetailPage = ({
           }
           alt={data.mdx?.frontmatter?.image_alt || ""}
         />
-        {children}
+        <div className="markdown-body">{children}</div>
       </Content>
     </Layout>
   );
